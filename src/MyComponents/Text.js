@@ -72,7 +72,7 @@ const Text = (props) => {
         <h1>your text summary</h1>
         <p>
           {
-            msg.split(" ").filter((element) => {
+            msg.split(/\s+/).filter((element) => {
               return element.length !== 0;
             }).length
           }
@@ -80,7 +80,7 @@ const Text = (props) => {
         </p>
         <p>
           {0.008 *
-            msg.split(" ").filter((element) => {
+            msg.split(/\s+/).filter((element) => {
               return element.length !== 0;
             }).length}
           minutes read
